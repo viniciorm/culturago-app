@@ -12,7 +12,7 @@
 
 ## Alcance técnico (MVP)
 - Emisión soulbound con metadatos en **IPFS** (NFT.Storage).
-- UI Glide (form + vistas) y **API propia** `/api/passport`.
+- UI cursor (form + vistas) y **API propia** `/api/passport`.
 - Sin transferencias (soulbound), sin marketplace, sin KYC.
 
 ## Próximos pasos
