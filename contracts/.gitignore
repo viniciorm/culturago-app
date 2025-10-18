@@ -1,0 +1,40 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Hardhat files
+cache/
+artifacts/
+typechain/
+typechain-types/
+
+# Node modules
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Hardhat Ignition default folders for deployments against a local node.
+ignitions/deployments/chain-31337/
+
+# Hardhat network files and deployments
+deployments/localhost/
+deployments/hardhat/
+
+# Private keys and sensitive data
+*.pem
+*.key

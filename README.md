@@ -18,7 +18,7 @@ CulturaGO es una plataforma Web3 que transforma la identidad cultural en activos
 
 ## 🎯 Objetivo del MVP
 - Demostrar un flujo completo de **emisión de pasaporte** (Web2→Web3) en 4 días.
-- Front **vibecoding (Glide)** + backend propio (Node/Express) + **Avalanche Fuji** + **IPFS**.
+- Front **vibecoding Cursor** + backend propio (Node/Express) + **Avalanche Fuji** + **PINATA** + **IPFS**.
 - Mostrar demo navegable y un video corto para el jurado.
 
 ## ⚙️ Stack del MVP
@@ -68,23 +68,53 @@ React Frontend → Pinata IPFS → Backend API → Avalanche C-Chain
 
 ## 🚀 Desarrollo Local
 
-### Frontend (React + Vite + Cursor)
+### Instalación Completa
 ```bash
-cd culturago-frontend
-npm install
+# Instalar todas las dependencias
+npm run install:all
+
+# Iniciar desarrollo completo (frontend + backend)
 npm run dev
 ```
-- **Editor**: Desarrollado con **Cursor** (AI-powered)
+
+### Componentes Individuales
+
+#### Frontend (React + Vite)
+```bash
+cd culturago-frontend && npm install && npm run dev
+```
 - **Puerto**: http://localhost:5178
-- **Hot Reload**: Activado automáticamente
-- **Linting**: `npm run lint`
+- **Editor**: Desarrollado con **Cursor** (AI-powered)
+
+#### Backend API (Node.js + Express)
+```bash
+cd backend && npm install && npm run dev
+```
+- **Puerto**: http://localhost:3001
+- **Endpoints**: `/api/passport`, `/api/health`
+
+#### Smart Contracts (Hardhat)
+```bash
+cd contracts && npm install && npm run deploy:fuji
+```
 
 ### Variables de Entorno
+
+#### Frontend (.env)
 ```bash
-# Pinata IPFS (ejemplo)
 VITE_PINATA_API_KEY=tu_api_key_aqui
 VITE_PINATA_SECRET_KEY=tu_secret_key_aqui
 VITE_PINATA_JWT=tu_jwt_token_aqui
+VITE_API_BASE_URL=http://localhost:3001/api
+```
+
+#### Backend (.env)
+```bash
+PORT=3001
+FUJI_RPC_URL=https://api.avax-test.network/ext/bc/C/rpc
+OWNER_PRIVATE_KEY=tu_private_key_sin_0x_prefix
+CONTRACT_ADDRESS=0x_direccion_del_contrato_desplegado
+CORS_ORIGIN=http://localhost:5173
 ```
 
 ## 🗺️ Roadmap (4 días)
