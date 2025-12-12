@@ -21,32 +21,54 @@ CulturaGO es una plataforma Web3 que transforma la identidad cultural en activos
 - Front **vibecoding Cursor** + backend propio (Node/Express) + **Avalanche Fuji** + **PINATA** + **IPFS**.
 - Mostrar demo navegable y un video corto para el jurado.
 
-## ⚙️ Stack del MVP
+## ⚙️ Stack Tecnológico Completo
 
 ### Frontend
-- **React 19** + **TypeScript** + **Vite**
-- **React Router DOM** para navegación
-- **CSS puro** (migrado desde Tailwind CSS)
-- **Axios** para requests HTTP
-- **ESLint** + **TypeScript** para calidad de código
-- **Desarrollado con Cursor** (AI-powered editor)
+- **React 19.1.1** - Biblioteca UI
+- **React DOM 19.1.1** - Renderizado
+- **TypeScript 5.9.3** - Tipado estático
+- **Vite 7.1.7** - Bundler y dev server
+- **React Router DOM 7.9.4** - Navegación SPA
+- **Axios 1.12.2** - Cliente HTTP
+- **@avalabs/avalanchejs 5.0.0** - SDK de Avalanche
+- **ESLint 9.36.0** - Linter
+- **TypeScript ESLint 8.45.0** - Linter para TypeScript
+- **@vitejs/plugin-react 5.0.4** - Plugin React para Vite
+- **CSS puro** - Estilos (migrado desde Tailwind CSS)
+- **Desarrollado con Cursor** - Editor AI-powered
 
-### Backend & Web3
-- **Node.js** + **Express** (API `/api/passport`)
-- **Solidity** + **Hardhat** + **Ethers.js** (Avalanche Fuji / C-Chain)
-- **Pinata** para almacenamiento IPFS
-- **Avalanche Fuji** testnet
-- **NFTs Soulbound** como certificados culturales
+### Backend
+- **Node.js** - Runtime JavaScript
+- **Express 4.18.2** - Framework web
+- **CORS 2.8.5** - Manejo de CORS
+- **dotenv 16.4.5** - Variables de entorno
+- **Ethers.js 6.13.2** - Interacción con blockchain
+- **Axios 1.7.7** - Cliente HTTP
+- **Multer 1.4.5-lts.1** - Manejo de archivos multipart
+- **Joi 17.13.3** - Validación de esquemas
+- **Nodemon 3.1.7** - Auto-reload en desarrollo
+- **Jest 29.7.0** - Framework de testing
 
-### Infraestructura
-- **Vite** como bundler y dev server
-- **IPFS** a través de Pinata Gateway
-- **Git** para control de versiones
+### Smart Contracts & Blockchain
+- **Solidity 0.8.24** - Lenguaje de contratos
+- **Hardhat 2.22.5** - Framework de desarrollo
+- **@nomicfoundation/hardhat-toolbox 5.0.0** - Herramientas Hardhat
+- **OpenZeppelin Contracts 5.0.2** - Contratos seguros (ERC721, Ownable)
+- **Ethers.js 6.13.2** - Interacción con blockchain desde backend
+- **Avalanche Fuji Testnet** - Red blockchain (Chain ID: 43113)
+- **NFTs Soulbound** - Tokens no transferibles (ERC721 modificado)
 
-### Integraciones
-- **Pinata API** para subida de metadatos e imágenes
-- **Avalanche C-Chain** para mint de NFTs
-- **Core Wallet** / **MetaMask** para conexión Web3
+### Infraestructura & Almacenamiento
+- **Pinata** - Servicio IPFS para almacenamiento descentralizado
+- **IPFS Gateway** - Acceso a contenido IPFS (gateway.pinata.cloud)
+- **Concurrently 8.2.2** - Ejecución paralela de scripts
+- **Git** - Control de versiones
+
+### Integraciones Externas
+- **Pinata API** - Subida de metadatos e imágenes a IPFS
+- **Avalanche C-Chain** - Red para mint de NFTs
+- **Snowtrace** - Block explorer (testnet.snowtrace.io)
+- **Core Wallet / MetaMask** - Wallets Web3 para conexión
 
 ## 🧱 Arquitectura (alto nivel)
 
@@ -83,7 +105,7 @@ npm run dev
 ```bash
 cd culturago-frontend && npm install && npm run dev
 ```
-- **Puerto**: http://localhost:5178
+- **Puerto**: http://localhost:5173
 - **Editor**: Desarrollado con **Cursor** (AI-powered)
 
 #### Backend API (Node.js + Express)
